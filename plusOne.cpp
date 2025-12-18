@@ -5,6 +5,7 @@
 
 using namespace std;
 
+// First Attempt
 class Solution {
 public:
     vector<int> plusOne(vector<int>& digits) {
@@ -35,11 +36,11 @@ public:
                 ++digits[i];            // Just increment it by 1
                 return digits;          // Done – no carry needed
             }
-            digits[i] = 0;              // It was 9 ? set to 0 and carry over
+            digits[i] = 0;              // It was 9 -> set to 0 and carry over
         }
     
         // If we get here, every digit was 9 (e.g., [9,9,9])
-        digits.insert(digits.begin(), 1);  // Add a new leading 1 ? [1,0,0,0]
+        digits.insert(digits.begin(), 1);  // Add a new leading 1 -> [1,0,0,0]
         return digits;
     }
 };
